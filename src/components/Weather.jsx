@@ -12,7 +12,6 @@ import humidity from "../assets/humidity.png";
 
 const Weather = () => {
   const [city, setCity] = useState("London"); // Default city
-  const [weatherData, setWeatherData] = useState(null); // To store fetched weather data
 
   const search = async (city) => {
     try {
