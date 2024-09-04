@@ -11,7 +11,7 @@ import wind_icon from "../assets/wind.png";
 import humidity_icon from "../assets/humidity.png";
 
 const Weather = () => {
-  const [city, setCity] = useState("mumbai"); // Default city
+  const [city, setCity] = useState("chennai"); // Default city
   const [weatherData, setWeatherData] = useState(false);
   const allIcons = {
     "01d": clear_icon,
@@ -37,12 +37,14 @@ const Weather = () => {
       const response = await fetch(url);
       const data = await response.json();
       console.log(data);
-      // const icon = allIcons[data.Weather[0].icon] || clear_icon;
+      const icon = allIcons[data.weather[0].icon] || clear_icon;
+      console.log(data.weather[0]);
       setWeatherData({
         humidity: data.main.humidity,
         windSpeed: data.wind.speed,
         temperature: Math.floor(data.main.temp),
         location: data.name,
+        icon: icon,
       });
     } catch (error) {
       console.error("Error fetching the weather data:", error);
@@ -59,7 +61,7 @@ const Weather = () => {
         <input type="text" placeholder="Search" />
         <img src={search_icon} alt="search" />
       </div>
-      <img src={clear_icon} alt="clear" className="weather-icon" />
+      <img src={weatherData.icon} alt="clear" className="weather-icon" />
       <p className="temperature">{weatherData.temperature}°c</p>
       <p className="location">{weatherData.location}</p>
       <div className="weather-data">
