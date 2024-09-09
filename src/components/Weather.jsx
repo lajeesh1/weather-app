@@ -60,6 +60,12 @@ const Weather = () => {
     }
   };
 
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      search(inputRef.current.value);
+    }
+  };
+
   useEffect(() => {
     search("london");
   }, []);
@@ -67,7 +73,12 @@ const Weather = () => {
   return (
     <div className="weather">
       <div className="search-bar">
-        <input ref={inputRef} type="text" placeholder="Search" />
+        <input
+          ref={inputRef}
+          type="text"
+          placeholder="Search"
+          onKeyDown={handleKeyPress}
+        />
         <img
           onClick={() => search(inputRef.current.value)}
           src={search_icon}
