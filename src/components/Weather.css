@@ -2,8 +2,8 @@
     place-self: center;
     padding: 40px;
     border-radius: 10px;
-  background: rgb( 2,  0, 36);
-        background: linear-gradient(51deg, rgb a( 2,  0, 36, 1) 0%,  rg ba(9 , 9, 121, 1) 35 %, r gba( 0, 212, 255, 1) 100%);
+    background: rgb(2, 0, 36);
+        background: linear-gradient(51deg, rgb(2, 108, 143), rgb(19, 108, 167), rgb(2, 43, 82));
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -42,7 +42,7 @@
 
 .temperature {
     color: #ebfffc;
-    font-size: 40px;
+    font-size: 45px;
 }
 
 .location {
