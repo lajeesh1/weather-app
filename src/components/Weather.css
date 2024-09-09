@@ -3,7 +3,7 @@
     padding: 40px;
     border-radius: 10px;
     background: rgb(2, 0, 36);
-        background: linear-gradient(51deg, rgb(2, 108, 143), rgb(19, 108, 167), rgb(2, 43, 82));
+    background: linear-gradient(51deg, rgb(2, 108, 143), rgb(19, 108, 167), rgb(2, 43, 82));
     display: flex;
     flex-direction: column;
     align-self: center;
